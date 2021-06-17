@@ -13,7 +13,7 @@ public class HotDrink {
     }
 
     public HotDrink(Integer price, Integer temperature, String name) {
-        this.name = "Hot Drink";
+        this.name = "tea";
         this.price = 2;
         this.temperature = 75;
     }

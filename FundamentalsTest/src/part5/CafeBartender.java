@@ -20,6 +20,7 @@ public class CafeBartender implements Bartender {
 
     @Override
     public void addDrinkable(Drinkable drink) {
+
         ArrayList<String> orders = new ArrayList<String>();
 
         orders.add("Expresso");
@@ -56,15 +57,17 @@ public class CafeBartender implements Bartender {
             @Override
             public String drink() {
                 return "Order name: " + drink();
-
             }
 
             @Override
             public Integer getPrice() {
                 return getPrice() * 2;
-                
             }
 
+            @Override
+            public Integer getTemperature() {
+                return null;
+            }
 
         };
 

@@ -4,21 +4,28 @@ import Part1.ColdDrink;
 import Part1.HotDrink;
 
 
-public class MixedDrink {
+public class  MixedDrink {
 
 
-    public MixedDrink(String name, HotDrink hotDrink, ColdDrink coldDrink ,Integer percentage) {
-        String nameHotDrink = hotDrink.getName();
-        String nameColdDrink = coldDrink.getName();
-        int priceCold = coldDrink.getPrice();
-        int priceHot = hotDrink.getPrice();
-        int calcPriceNow = hotDrink.calcPrice(coldDrink.getPrice());
-        int percentageResult = (hotDrink.getTemperature() * percentage +10 * (100 - percentage)) / 100;
+    private String name;
+    private HotDrink hotDrink;
+    private ColdDrink coldDrink;
+    private int percentage;
 
+    public MixedDrink(String name, HotDrink hotDrink, ColdDrink coldDrink, int percentage) {
+        this.name = name;
+        this.hotDrink = hotDrink;
+        this.coldDrink = coldDrink;
+        this.percentage = percentage;
+    }
 
+    public int calcPrice() {
+        return coldDrink.getPrice() + hotDrink.getPrice();
+    }
 
-
-
+    public int calcTemperature() {
+        int temp_hot_drink = hotDrink.getTemperature();
+        return (temp_hot_drink * percentage + 10 * (100 - percentage)) / 100;
     }
 
 }

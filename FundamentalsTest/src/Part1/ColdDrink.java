@@ -9,6 +9,7 @@ public class ColdDrink {
         this.price = price;
     }
 
+
     public String getName() {
         return name;
     }

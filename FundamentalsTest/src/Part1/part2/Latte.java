@@ -10,7 +10,14 @@ public abstract class Latte extends MixedDrink  implements Drinkable {
 
 
     public Latte(ColdDrink coldDrink) {
-        super("Latte", new Expresso(3, 80, "Expresso"), coldDrink, 50);
+        super("Latte" , "Expresso", "", 54);
+
+
+    };
+
+
+
+
 
 
 
